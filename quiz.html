@@ -12,7 +12,7 @@
 <body>
 <header><div class="header-inner"><div class="brand"><span class="mark" aria-hidden="true">+</span><div><strong>헬스 커넥터</strong><small>HEALTH CONNECTOR</small></div></div><span class="tag">탐구 퀴즈</span></div></header>
 <main>
-<section class="panel" id="intro" aria-labelledby="intro-title"><div class="eyebrow">DISCOVER · THINK · CONNECT</div><h1 id="intro-title">우리의 탐구,<br>얼마나 이해했나요?</h1><p class="lead">농촌 고령층의 의료 접근성부터<br>해결안의 의미까지, 퀴즈로 확인해보세요.</p><div class="features"><span class="feature">8문항 중 무작위 5문항</span><span class="feature">문제·보기 순서 무작위</span><span class="feature">4지선다</span></div><p class="hint">시간 제한은 없어요. 가장 적절한 답 하나를 선택해주세요.</p><button class="btn primary" id="start" type="button">퀴즈 시작하기 →</button></section>
+<section class="panel" id="intro" aria-labelledby="intro-title"><div class="eyebrow">DISCOVER · THINK · CONNECT</div><h1 id="intro-title">우리의 탐구,<br>얼마나 이해했나요?</h1><p class="lead">농촌 고령층의 의료 접근성부터<br>해결안의 의미까지, 퀴즈로 확인해보세요.</p><div class="features"><span class="feature">11문항 중 무작위 5문항</span><span class="feature">문제·보기 순서 무작위</span><span class="feature">4지선다</span></div><p class="hint">시간 제한은 없어요. 가장 적절한 답 하나를 선택해주세요.</p><button class="btn primary" id="start" type="button">퀴즈 시작하기 →</button></section>
 <section class="panel" id="quiz" hidden aria-labelledby="question-title"><div class="topline"><span class="question-number" id="question-number"></span><span>보기 4개 중 하나를 선택하세요</span></div><div class="track" role="progressbar" aria-label="퀴즈 진행" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="progress"><span id="progress-fill"></span></div><h2 id="question-title" tabindex="-1"></h2><div class="choices" id="choices" role="group" aria-labelledby="question-title"></div><div class="feedback" id="feedback" role="status" aria-live="polite" hidden></div><div class="actions"><button class="btn primary" type="button" id="next" hidden>다음 문제 →</button></div></section>
 <section class="panel" id="result" hidden aria-labelledby="result-title"><div class="eyebrow">QUIZ COMPLETE</div><h1 id="result-title" tabindex="-1">퀴즈를 모두 풀었어요!</h1><div class="score" id="score"></div><p class="result-meta" id="result-message"></p><ol class="review-list" id="review-list"></ol><button type="button" class="btn primary" id="restart">새 문제 조합으로 다시 풀기 ↻</button><p class="hint">다시 시작하면 문제 5개와 각 문제의 보기 순서를 새로 섞어요.</p></section>
 <footer>창의혁신 주제연구 프로젝트 · 헬스 커넥터</footer>
@@ -21,6 +21,21 @@
 'use strict';
 // 정답은 보기의 위치가 아닌 고유 ID로 판정해 순서를 섞어도 유지됩니다.
 const QUESTION_BANK = [
+ {id:'original1',question:'팀 헬스 커넥터가 답사한 지역의 생활 여건에 관한 설명으로 옳지 않은 것은?',options:[
+  {id:'a',text:'가까운 병원·보건소까지 가는 데 편도로 약 1시간 이상이 걸린다.'},
+  {id:'b',text:'산지에 위치해 주민의 이동 여건을 고려할 필요가 있다.'},
+  {id:'c',text:'마을 안에 마트가 한 곳 있어 주민이 차를 타지 않고 생필품을 구매할 수 있다.'},
+  {id:'d',text:'고령 주민이 거주하므로 의료 서비스의 이용 편의를 고려할 필요가 있다.'}],correctId:'c',explanation:'원래 퀴즈의 면담 정리에 따르면 마트도 차로 편도 약 40분 이동해야 해요. 마을 안에서 편리하게 구매할 수 있다는 설명은 맞지 않아요.'},
+ {id:'original2',question:'이번 의료 자판기 제안이 중점적으로 해결하려는 필요와 가장 거리가 먼 사례는?',options:[
+  {id:'a',text:'장기 복용 약품을 반복적으로 수령해야 하는 주민의 이동 부담을 줄이는 경우'},
+  {id:'b',text:'마을의 상비약을 지속적으로 관리하고 유통기한을 확인하는 경우'},
+  {id:'c',text:'추가 수령이 필요 없는 단 한 번의 처방약 수령만을 주된 목적으로 삼는 경우'},
+  {id:'d',text:'반복 수령하는 약품의 복약 안내를 큰 글씨와 음성으로 확인하는 경우'}],correctId:'c',explanation:'이번 제안은 농촌 고령층의 반복적인 약품 수령과 상비약 관리, 복약 안내를 잇는 데 초점을 두었어요. 일회성 처방약 수령만을 주된 목적으로 하는 것은 그 초점과 거리가 있어요.'},
+ {id:'original3',question:'팀이 주제 선정 단계에서 ‘의료 접근성’을 직접적인 탐구 주제로 선택한 틀은 무엇일까요?',options:[
+  {id:'a',text:'HS4A'},
+  {id:'b',text:'SDGs'},
+  {id:'c',text:'MDGs'},
+  {id:'d',text:'ESG'}],correctId:'a',explanation:'활동보고서의 핵심 주제 선정 부분에서 팀은 HS4A의 의료 접근성을 탐구 주제로 선택했다고 밝혔어요. 다른 틀과의 관련성 여부가 아니라 실제 주제 선정의 출발점을 묻는 문제예요.'},
  {id:'q1',question:'원격진료 앱을 제공해도 농촌 고령층의 의료 접근성 문제가 남는 가장 적절한 이유는?',options:[
   {id:'a',text:'원격 상담의 이용률이 높아져야 의약품 수령 문제도 함께 해결되기 때문이다.'},
   {id:'b',text:'상담에 접근하는 문제와 상담 이후 필요한 물품을 받는 문제는 별도로 남을 수 있기 때문이다.'},
