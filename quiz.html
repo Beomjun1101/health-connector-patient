@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>헬스 커넥터 · 탐구 퀴즈</title>
+<style>
+:root{--accent:#5055b1;--accent-dark:#383c87;--tint:#f0f1fb;--ink:#303039;--muted:#666671;--line:#e3e3eb;--green:#287619;--green-bg:#f0f8ec;--red:#b52537;--red-bg:#fff0f2}*{box-sizing:border-box}body{margin:0;background:#f7f7f9;color:var(--ink);font-family:"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;line-height:1.6}button{font:inherit;cursor:pointer;touch-action:manipulation}button:focus-visible{outline:3px solid #d79413;outline-offset:4px}button:disabled{cursor:default}header{background:white;border-top:6px solid var(--accent);border-bottom:1px solid var(--line)}.header-inner{max-width:940px;margin:auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;gap:12px;align-items:center}.mark{display:grid;place-items:center;background:var(--accent);color:white;border-radius:14px;width:44px;height:44px;font-size:32px;line-height:1}.brand strong{font-size:18px;display:block}.brand small{font-size:10px;letter-spacing:1.8px;color:var(--muted);display:block}.tag{background:var(--tint);border-radius:30px;padding:6px 14px;color:var(--accent);font-size:12px}main{max-width:850px;margin:38px auto;padding:0 24px 40px}.panel{background:white;border:1px solid var(--line);border-radius:24px;padding:36px}.eyebrow{color:var(--accent);font-size:12px;letter-spacing:1.8px;font-weight:800}h1{font-size:clamp(28px,5vw,39px);letter-spacing:-1.2px;line-height:1.35;margin:14px 0 18px}h2{font-size:clamp(22px,4vw,28px);letter-spacing:-.6px;line-height:1.5;margin:24px 0}.lead{color:var(--muted);font-size:17px}.features{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}.feature{background:var(--tint);color:var(--accent);border-radius:10px;padding:9px 13px;font-size:14px}.btn{border:1px solid var(--line);background:white;color:var(--ink);padding:13px 24px;border-radius:12px;min-height:50px;font-weight:750;font-size:16px}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}.btn.primary:hover{background:var(--accent-dark)}.topline{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:14px}.question-number{color:var(--accent);font-weight:800}.track{height:7px;background:var(--tint);border-radius:10px;overflow:hidden;margin:14px 0 22px}.track span{display:block;height:100%;background:var(--accent);transition:width .2s}.choices{display:grid;gap:12px;margin:22px 0}.choice{display:flex;align-items:flex-start;text-align:left;gap:14px;border:1px solid var(--line);background:white;border-radius:14px;padding:17px 18px;color:var(--ink);font-size:17px;line-height:1.65;width:100%}.choice:not(:disabled):hover{border-color:var(--accent);background:var(--tint)}.number{flex-shrink:0;display:grid;place-items:center;width:29px;height:29px;border-radius:50%;font-weight:800;background:var(--tint);color:var(--accent);font-size:14px;margin-top:2px}.choice.correct{border:2px solid var(--green);background:var(--green-bg);padding:16px 17px}.choice.correct .number{background:var(--green);color:white}.choice.wrong{border:2px solid var(--red);background:var(--red-bg);padding:16px 17px}.choice.wrong .number{background:var(--red);color:white}.choice.dim{color:var(--muted)}.feedback{border-radius:14px;background:var(--green-bg);padding:18px 20px;margin:20px 0;color:var(--ink)}.feedback.wrong{background:var(--red-bg)}.feedback strong{display:block;font-size:18px;margin-bottom:6px}.feedback p{margin:5px 0;font-size:15px}.actions{display:flex;justify-content:flex-end;gap:12px;margin-top:22px}.hint{color:var(--muted);font-size:13px}.score{font-size:72px;line-height:1.2;color:var(--accent);font-weight:800;margin:25px 0 10px}.score small{font-size:25px;color:var(--muted)}.result-meta{color:var(--muted)}.review-list{display:grid;gap:12px;padding:0;list-style:none;margin:28px 0}.review-item{background:#f7f7f9;border:1px solid var(--line);border-radius:14px;padding:17px 20px}.review-item h3{font-size:16px;line-height:1.6;margin:6px 0 10px}.review-item p{font-size:14px;margin:5px 0;color:var(--muted)}.badge{color:var(--green);font-size:12px;font-weight:800}.badge.wrong{color:var(--red)}footer{text-align:center;color:var(--muted);font-size:12px;margin:25px 0}[hidden]{display:none!important}@media(max-width:600px){main{padding:0 14px 25px;margin-top:22px}.panel{padding:25px 20px;border-radius:19px}.header-inner{padding:15px 18px}.tag{display:none}.choice{font-size:16px;padding:15px 13px;gap:10px}.choice.correct,.choice.wrong{padding:14px 12px}.number{width:26px;height:26px}.btn{width:100%}.actions{flex-direction:column}.topline{font-size:13px}.lead{font-size:16px}}@media(prefers-reduced-motion:reduce){.track span{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="header-inner"><div class="brand"><span class="mark" aria-hidden="true">+</span><div><strong>헬스 커넥터</strong><small>HEALTH CONNECTOR</small></div></div><span class="tag">탐구 퀴즈</span></div></header>
+<main>
+<section class="panel" id="intro" aria-labelledby="intro-title"><div class="eyebrow">DISCOVER · THINK · CONNECT</div><h1 id="intro-title">우리의 탐구,<br>얼마나 이해했나요?</h1><p class="lead">농촌 고령층의 의료 접근성부터<br>해결안의 의미까지, 퀴즈로 확인해보세요.</p><div class="features"><span class="feature">8문항 중 무작위 5문항</span><span class="feature">문제·보기 순서 무작위</span><span class="feature">4지선다</span></div><p class="hint">시간 제한은 없어요. 가장 적절한 답 하나를 선택해주세요.</p><button class="btn primary" id="start" type="button">퀴즈 시작하기 →</button></section>
+<section class="panel" id="quiz" hidden aria-labelledby="question-title"><div class="topline"><span class="question-number" id="question-number"></span><span>보기 4개 중 하나를 선택하세요</span></div><div class="track" role="progressbar" aria-label="퀴즈 진행" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="progress"><span id="progress-fill"></span></div><h2 id="question-title" tabindex="-1"></h2><div class="choices" id="choices" role="group" aria-labelledby="question-title"></div><div class="feedback" id="feedback" role="status" aria-live="polite" hidden></div><div class="actions"><button class="btn primary" type="button" id="next" hidden>다음 문제 →</button></div></section>
+<section class="panel" id="result" hidden aria-labelledby="result-title"><div class="eyebrow">QUIZ COMPLETE</div><h1 id="result-title" tabindex="-1">퀴즈를 모두 풀었어요!</h1><div class="score" id="score"></div><p class="result-meta" id="result-message"></p><ol class="review-list" id="review-list"></ol><button type="button" class="btn primary" id="restart">새 문제 조합으로 다시 풀기 ↻</button><p class="hint">다시 시작하면 문제 5개와 각 문제의 보기 순서를 새로 섞어요.</p></section>
+<footer>창의혁신 주제연구 프로젝트 · 헬스 커넥터</footer>
+</main>
+<script>
+'use strict';
+// 정답은 보기의 위치가 아닌 고유 ID로 판정해 순서를 섞어도 유지됩니다.
+const QUESTION_BANK = [
+ {id:'q1',question:'원격진료 앱을 제공해도 농촌 고령층의 의료 접근성 문제가 남는 가장 적절한 이유는?',options:[
+  {id:'a',text:'원격 상담의 이용률이 높아져야 의약품 수령 문제도 함께 해결되기 때문이다.'},
+  {id:'b',text:'상담에 접근하는 문제와 상담 이후 필요한 물품을 받는 문제는 별도로 남을 수 있기 때문이다.'},
+  {id:'c',text:'디지털 사용 교육을 먼저 마치면 이동과 물품 수령 문제도 대부분 해결되기 때문이다.'},
+  {id:'d',text:'원격 상담의 정확도를 높이는 것이 진료 이후의 접근성을 결정하는 유일한 조건이기 때문이다.'}],correctId:'b',explanation:'상담에 연결되는 것과 진료 이후 물품을 수령하는 것은 서로 다른 단계예요. 디지털 사용의 어려움도 함께 고려해야 해요.'},
+ {id:'q2',question:'인터넷 조사 이후 현장 면담을 진행한 목적을 가장 적절하게 설명한 것은?',options:[
+  {id:'a',text:'조사로 세운 가정을 현장의 생활 여건과 비교하고, 문제 정의와 해결안의 적합성을 보완하기 위해서다.'},
+  {id:'b',text:'현장의 경험을 통해 문헌 자료보다 우선하는 단일한 판단 기준을 마련하기 위해서다.'},
+  {id:'c',text:'대상 지역의 대표자를 면담함으로써 주민 전체의 요구를 확정하기 위해서다.'},
+  {id:'d',text:'주민의 서비스 필요성을 확인함으로써 기술과 운영 방식의 타당성까지 검증하기 위해서다.'}],correctId:'a',explanation:'면담은 자료 조사에서 세운 가정을 현장과 비교하고 보완하는 과정이에요. 한 번의 면담만으로 주민 전체의 의견이나 기술적 타당성을 확정할 수는 없어요.'},
+ {id:'q4',question:'문제를 ‘병원까지의 거리’에서 ‘의료 이용 과정의 단절’로 재정의했을 때 해결안의 평가 기준은 어떻게 달라져야 할까?',options:[
+  {id:'a',text:'병원까지 이동하는 시간보다 원격 상담에 걸리는 시간을 우선 평가해야 한다.'},
+  {id:'b',text:'진료 이후의 단계가 추가되므로 진료 접근성은 평가 범위에서 제외해야 한다.'},
+  {id:'c',text:'서비스 이용 단계가 줄었는지를 중심으로 보고, 단계 사이의 연결은 보조적으로 평가해야 한다.'},
+  {id:'d',text:'진료에 도달하는 것뿐 아니라 이후 안내와 수령까지 이어지는지를 평가해야 한다.'}],correctId:'d',explanation:'문제를 이용 과정 전체로 확장했으므로 진료에 접근하는 단계부터 이후 안내·수령까지 연결되는지 살펴봐야 해요.'},
+ {id:'q6',question:'드론과 의료지원 스테이션 중 어떤 방안이 대상 지역에 적합한지 판단할 때 가장 타당한 비교 방식은?',options:[
+  {id:'a',text:'두 방안의 평균 전달 시간을 비교해 더 빠른 방식을 선택한다.'},
+  {id:'b',text:'두 방안의 초기 설치 비용을 비교한 뒤 이용 편의는 도입 이후에 평가한다.'},
+  {id:'c',text:'동일한 이용 상황을 가정하고 전달·수령·관리 과정 전체의 제약과 지속 가능성을 비교한다.'},
+  {id:'d',text:'두 방안이 정상적으로 작동하는 상황에서 제공 가능한 기능 수를 비교한다.'}],correctId:'c',explanation:'속도나 기능 수 하나만으로는 적합성을 판단하기 어려워요. 같은 상황에서 실제 수령 방식과 관리 부담, 지속적인 운영까지 비교해야 해요.'},
+ {id:'q7',question:'의료버스가 정기 방문하는 마을에 추가적인 의료지원 방안을 검토할 근거로 가장 적절한 것은?',options:[
+  {id:'a',text:'정기 방문이 이루어져도 방문 사이에 생기는 수요와 진료 이후의 필요가 충분히 충족되는지는 별도 확인이 필요하다.'},
+  {id:'b',text:'정기 방문의 간격을 줄이면 진료와 물품 수령에서 발생하는 모든 공백을 해결할 수 있다.'},
+  {id:'c',text:'방문 진료는 주민 이동을 줄여주므로 추가 서비스의 필요성은 운영 비용만으로 판단하면 된다.'},
+  {id:'d',text:'의료버스의 방문 횟수가 일정하면 주민의 의료 수요도 일정하다고 보고 공급량을 정할 수 있다.'}],correctId:'a',explanation:'정기 방문은 이동 부담을 줄여주지만 방문 사이의 수요나 진료 이후의 필요까지 모두 충족한다고 단정할 수는 없어요.'},
+ {id:'q8',question:'공동 구급함을 접근하기 쉬운 장소에 설치했을 때, 그것만으로 해결됐다고 보기 어려운 문제는?',options:[
+  {id:'a',text:'설치 지점까지의 평균 이동 시간 감소'},
+  {id:'b',text:'물품을 찾을 수 있는 장소의 명확성'},
+  {id:'c',text:'주민이 물품에 물리적으로 접근할 기회의 확대'},
+  {id:'d',text:'필요한 물품을 적절하게 이용하도록 돕는 안내와 지속적인 관리'}],correctId:'d',explanation:'가까운 곳에 설치하는 것은 물리적 접근을 돕지만 적절한 이용 안내와 지속적인 물품 관리는 별도로 마련해야 해요.'},
+ {id:'q15',question:'QR의 ‘유효 시간’과 ‘사용 완료 기록’을 함께 적용하는 이유로 가장 정확한 것은?',options:[
+  {id:'a',text:'사용 완료 기록은 QR의 발급 시점을 확인하고, 유효 시간은 수령 횟수를 제한하기 때문이다.'},
+  {id:'b',text:'유효 시간은 이용 가능한 기간을 제한하고, 사용 완료 기록은 그 기간 안에서의 재사용을 제한하기 때문이다.'},
+  {id:'c',text:'유효 시간이 짧을수록 사용 완료 기록을 다른 기기와 공유할 필요가 줄어들기 때문이다.'},
+  {id:'d',text:'두 기능은 같은 방식으로 재사용을 차단하므로 하나가 실패할 때 다른 하나가 이를 완전히 대신하기 때문이다.'}],correctId:'b',explanation:'유효 시간은 언제까지 쓸 수 있는지를, 사용 완료 기록은 이미 사용했는지를 확인해요. 서로 다른 조건을 확인하는 기능이에요.'},
+ {id:'q19',question:'QR 발급부터 인식·복약 안내까지 정상 작동했다는 결과로 뒷받침할 수 있는 결론은?',options:[
+  {id:'a',text:'확인한 조건에서 핵심 정보 전달 흐름이 작동하며, 사용자 편의성과 실제 운영 효과는 추가 검증이 필요하다.'},
+  {id:'b',text:'핵심 정보 전달이 구현됐으므로 실제 의료 서비스의 접근성 개선 효과도 확인됐다고 볼 수 있다.'},
+  {id:'c',text:'큰 글씨와 음성 안내가 실행됐으므로 고령층의 독립적인 이용 가능성이 검증됐다고 볼 수 있다.'},
+  {id:'d',text:'QR의 이용 조건을 확인했으므로 실제 의료기관의 승인과 물품 수령의 안전성까지 검증됐다고 볼 수 있다.'}],correctId:'a',explanation:'기능의 작동 확인은 사용 흐름을 구현했다는 근거예요. 실제 사용자 편의와 현장 운영 효과는 별도의 검증이 필요해요.'}
+];
+const ROUND_SIZE=5;
+const $=id=>document.getElementById(id);
+let round=[],answers=[],index=0,answered=false;
+function shuffle(items){const result=[...items];for(let i=result.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[result[i],result[j]]=[result[j],result[i]];}return result;}
+function screen(name){for(const id of ['intro','quiz','result'])$(id).hidden=id!==name;}
+function focusHeading(el){el.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});}
+function startRound(){round=shuffle(QUESTION_BANK).slice(0,ROUND_SIZE).map(q=>({...q,options:shuffle(q.options)}));answers=[];index=0;screen('quiz');showQuestion();}
+function showQuestion(){answered=false;const q=round[index];$('question-number').textContent=`문제 ${index+1} / ${round.length}`;$('progress').setAttribute('aria-valuenow',String(index));$('progress-fill').style.width=`${index/round.length*100}%`;$('question-title').textContent=q.question;$('choices').replaceChildren();$('feedback').replaceChildren();$('feedback').hidden=true;$('next').hidden=true;$('next').textContent=index===round.length-1?'결과 확인하기 →':'다음 문제 →';q.options.forEach((option,i)=>{const button=document.createElement('button');button.type='button';button.className='choice';button.dataset.optionId=option.id;const number=document.createElement('span');number.className='number';number.setAttribute('aria-hidden','true');number.textContent=String(i+1);const text=document.createElement('span');text.textContent=option.text;button.setAttribute('aria-label',`${i+1}번. ${option.text}`);button.append(number,text);button.onclick=()=>answer(option.id);$('choices').append(button);});focusHeading($('question-title'));}
+function answer(optionId){if(answered)return;answered=true;const q=round[index],correct=optionId===q.correctId;answers.push({question:q,selectedId:optionId,correct});const correctIndex=q.options.findIndex(o=>o.id===q.correctId);for(const button of $('choices').children){button.disabled=true;const id=button.dataset.optionId;if(id===q.correctId){button.classList.add('correct');button.setAttribute('aria-label',button.getAttribute('aria-label')+'. 정답');}else if(id===optionId){button.classList.add('wrong');button.setAttribute('aria-label',button.getAttribute('aria-label')+'. 선택한 오답');}else button.classList.add('dim');}const title=document.createElement('strong');title.textContent=correct?'정답이에요!':`아쉬워요. 정답은 ${correctIndex+1}번이에요.`;const why=document.createElement('p');why.textContent=q.explanation;$('feedback').className='feedback'+(correct?'':' wrong');$('feedback').append(title,why);$('feedback').hidden=false;$('next').hidden=false;$('progress').setAttribute('aria-valuenow',String(index+1));$('progress-fill').style.width=`${(index+1)/round.length*100}%`;}
+function showResult(){screen('result');const correctCount=answers.filter(a=>a.correct).length;$('score').replaceChildren(document.createTextNode(String(correctCount)));const denominator=document.createElement('small');denominator.textContent=` / ${round.length}문제`;$('score').append(denominator);$('result-message').textContent=correctCount===round.length?'모든 문제를 맞혔어요. 우리의 탐구를 꼼꼼히 이해하셨네요!':'수고하셨어요. 아래에서 선택한 답과 정답을 확인해보세요.';$('review-list').replaceChildren();answers.forEach((a,i)=>{const item=document.createElement('li');item.className='review-item';const badge=document.createElement('span');badge.className='badge'+(a.correct?'':' wrong');badge.textContent=`문제 ${i+1} · ${a.correct?'정답':'오답'}`;const title=document.createElement('h3');title.textContent=a.question.question;const selected=document.createElement('p');selected.textContent='내가 고른 답: '+a.question.options.find(o=>o.id===a.selectedId).text;const correct=document.createElement('p');correct.textContent='정답: '+a.question.options.find(o=>o.id===a.question.correctId).text;item.append(badge,title,selected,correct);$('review-list').append(item);});focusHeading($('result-title'));}
+$('start').onclick=startRound;$('restart').onclick=startRound;$('next').onclick=()=>{if(!answered)return;index++;if(index>=round.length)showResult();else showQuestion();};
+</script>
+</body>
+</html>
